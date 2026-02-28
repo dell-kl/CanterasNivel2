@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CanterasNivel2.iml" filepath="$PROJECT_DIR$/CanterasNivel2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ObjetosJava/ObjetosJava.iml" filepath="$PROJECT_DIR$/ObjetosJava/ObjetosJava.iml" />
     </modules>
   </component>
 </project>

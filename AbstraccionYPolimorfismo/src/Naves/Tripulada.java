@@ -3,9 +3,10 @@ package Naves;
 public class Tripulada extends VehiculoEspacial {
 
     @Override
-    public void Despegue() {
-
+    public String Despegue() {
+        return "La nave" + this.getNombre() + "Ha comenzado con el despegue";
     }
+
 
     @Override
     public void Propulsion() {

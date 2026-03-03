@@ -5,8 +5,8 @@ public class Lanzadera extends VehiculoEspacial{
 
 
     @Override
-    public void Despegue() {
-
+    public String Despegue() {
+        return "La nave" + this.getNombre() + "Ha comenzado con el despegue";
     }
 
     @Override

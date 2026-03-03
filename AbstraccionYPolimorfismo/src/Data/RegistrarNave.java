@@ -2,6 +2,8 @@ package Data;
 
 import Naves.VehiculoEspacial;
 
+import java.io.IOException;
+
 public class RegistrarNave {
     private IRegistrarTipoNave registrarNave;
 
@@ -9,7 +11,7 @@ public class RegistrarNave {
         this.registrarNave = registrarNave;
     }
 
-    public void GenerarGuardado(VehiculoEspacial vehiculo) {
+    public void GenerarGuardado(VehiculoEspacial vehiculo) throws IOException {
         this.registrarNave.RegistrarNave(vehiculo);
     }
 }

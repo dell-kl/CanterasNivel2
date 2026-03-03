@@ -19,6 +19,9 @@ public class RegistrarTipoTripulada implements IRegistrarTipoNave {
         textoFormateado.append(vehiculo.getVelocidad());
         textoFormateado.append(" --- Peso : ");
         textoFormateado.append(vehiculo.getPeso());
+        textoFormateado.append(" --- Informacion: ");
+        textoFormateado.append(vehiculo.Despegue());
+
 
         Files.writeString(ruta, textoFormateado);
     }

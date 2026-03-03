@@ -164,3 +164,79 @@ public class Tripulada extends VehiculoEspacial {
     }
 }
 ```
+
+### Funcionalidad
+
+Nuestra accion **Despegue**, podemos usarlo en cada respectiva clase que se encarga de guardar los datos de cada tipo de nave.
+
+```java
+// Para registrar Datos de Naves Lanzadera
+public class RegistrarTipoLanzadera implements IRegistrarTipoNave {
+    @Override
+    public void RegistrarNave(VehiculoEspacial vehiculo) throws IOException {
+        //Registraremos los datos en un archivo de texto para ser solamente de ejemplo.
+        Path ruta = Path.of("DatosNaveLanzadora.txt");
+
+        StringBuilder textoFormateado = new StringBuilder();
+        textoFormateado.append(" --- Nombre Nave: ");
+        textoFormateado.append(vehiculo.getNombre());
+        textoFormateado.append(" --- Velocidad: ");
+        textoFormateado.append(vehiculo.getVelocidad());
+        textoFormateado.append(" --- Peso : ");
+        textoFormateado.append(vehiculo.getPeso());
+        //Usando nuestro metodo Despegue
+        textoFormateado.append(" --- Informacion : ");
+        textoFormateado.append(vehiculo.Despegue());
+        
+        Files.writeString(ruta, textoFormateado);
+    }
+}
+```
+
+```java
+// Para registrar datos de naves no tripulada
+public class RegistrarTipoNoTripulada implements IRegistrarTipoNave {
+    @Override
+    public void RegistrarNave(VehiculoEspacial vehiculo) throws IOException {
+        Path ruta = Path.of("DatosNaveNoTripulada.txt");
+
+        StringBuilder textoFormateado = new StringBuilder();
+        textoFormateado.append(" --- Nombre Nave: ");
+        textoFormateado.append(vehiculo.getNombre());
+        textoFormateado.append(" --- Velocidad: ");
+        textoFormateado.append(vehiculo.getVelocidad());
+        textoFormateado.append(" --- Peso : ");
+        textoFormateado.append(vehiculo.getPeso());
+        textoFormateado.append(" --- Informacion: ");
+        textoFormateado.append(vehiculo.Despegue());
+
+        Files.writeString(ruta, textoFormateado);
+    }
+}
+
+```
+
+```java
+// Para registrar datos de naves tripulada
+public class RegistrarTipoTripulada implements IRegistrarTipoNave {
+    @Override
+    public void RegistrarNave(VehiculoEspacial vehiculo) throws IOException {
+
+        Path ruta = Path.of("DatosNaveTripulada.txt");
+
+        StringBuilder textoFormateado = new StringBuilder();
+        textoFormateado.append(" --- Nombre Nave: ");
+        textoFormateado.append(vehiculo.getNombre());
+        textoFormateado.append(" --- Velocidad: ");
+        textoFormateado.append(vehiculo.getVelocidad());
+        textoFormateado.append(" --- Peso : ");
+        textoFormateado.append(vehiculo.getPeso());
+        textoFormateado.append(" --- Informacion: ");
+        textoFormateado.append(vehiculo.Despegue());
+
+
+        Files.writeString(ruta, textoFormateado);
+    }
+}
+
+```

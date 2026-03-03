@@ -19,6 +19,9 @@ public class RegistrarTipoLanzadera implements IRegistrarTipoNave {
         textoFormateado.append(vehiculo.getVelocidad());
         textoFormateado.append(" --- Peso : ");
         textoFormateado.append(vehiculo.getPeso());
+        //Usando nuestro metodo Despegue
+        textoFormateado.append(" --- Informacion : ");
+        textoFormateado.append(vehiculo.Despegue());
 
         Files.writeString(ruta, textoFormateado);
     }

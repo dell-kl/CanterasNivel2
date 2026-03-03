@@ -1,0 +1,1 @@
+ --- Nombre Nave: Cohete Morty --- Velocidad: 10300.0 --- Peso : 10000.0

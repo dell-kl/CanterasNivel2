@@ -1,0 +1,1 @@
+ --- Nombre Nave: Zeta Y --- Velocidad: 3000.0 --- Peso : 4000.0 --- Informacion: La naveZeta YHa comenzado con el despegue

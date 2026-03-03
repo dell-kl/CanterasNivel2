@@ -1,0 +1,1 @@
+ --- Nombre Nave: Zeta X --- Velocidad: 3000.0 --- Peso : 4000.0

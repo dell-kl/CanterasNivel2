@@ -104,3 +104,63 @@ public class RegistrarNave {
 
 ## Polimorfismo
 
+En nuestra clase abstracta, se tiene lo que son dos metodos abstractos lo que en cada
+clase podria hacer una implementacio distinta de funcionalidad.
+
+```java
+// VehiculoEspacial.java
+public abstract String Despegue();
+public abstract void Propulsion();
+```
+
+```java
+// Lanzadera.java
+public class Lanzadera extends VehiculoEspacial{
+
+    @Override
+    public String Despegue() {
+        return "La nave lanzadera" + this.getNombre() + "Ha comenzado con el despegue";
+    }
+
+    @Override
+    public void Propulsion() {
+
+    }
+}
+
+```
+
+```java
+// Robotica.java
+public class Robotica extends VehiculoEspacial{
+
+    @Override
+    public String Despegue() {
+        return "La nava no tripulada " + this.getNombre() + "Ha comenzado con el despegue";
+    }
+
+
+    @Override
+    public void Propulsion() {
+
+    }
+}
+
+```
+
+
+```java
+public class Tripulada extends VehiculoEspacial {
+
+    @Override
+    public String Despegue() {
+        return "La nave tripulada " + this.getNombre() + "Ha comenzado con el despegue";
+    }
+
+
+    @Override
+    public void Propulsion() {
+
+    }
+}
+```

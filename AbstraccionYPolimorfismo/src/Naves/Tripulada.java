@@ -4,7 +4,7 @@ public class Tripulada extends VehiculoEspacial {
 
     @Override
     public String Despegue() {
-        return "La nave" + this.getNombre() + "Ha comenzado con el despegue";
+        return "La nave tripulada " + this.getNombre() + "Ha comenzado con el despegue";
     }
 
 

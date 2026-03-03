@@ -4,7 +4,7 @@ public class Robotica extends VehiculoEspacial{
 
     @Override
     public String Despegue() {
-        return "La nave" + this.getNombre() + "Ha comenzado con el despegue";
+        return "La nava no tripulada " + this.getNombre() + "Ha comenzado con el despegue";
     }
 
 
